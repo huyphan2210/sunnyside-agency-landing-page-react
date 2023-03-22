@@ -1,10 +1,54 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import { useState } from 'react';
 
-ReactDOM.createRoot(document.getElementsByTagName('main')[0] as HTMLElement).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+import heroImg from './assets/images/desktop/image-header.jpg'
+
+import './Main.css';
+
+function Main() {
+
+  return (
+    <div id='content'>
+      <section id='heroSection'>
+        <h1>We are creatives</h1>
+      </section>
+      <section>
+      Transform your brand
+
+      We are a full-service creative agency specializing in helping brands grow fast. 
+      Engage your clients through compelling visuals that do most of the marketing for you.
+
+      Learn more
+
+      Stand out to the right audience
+
+      Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places. 
+
+      Learn more
+      </section>
+      <section>
+        Graphic design
+        Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients' attention.
+
+        Photography
+        Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+      </section>
+      <section>
+        Client testimonials
+
+        We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+        Emily R.
+        Marketing Director
+
+        Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.
+        Thomas S.
+        Chief Operating Officer
+
+        Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+        Jennie F.
+        Business Owner
+      </section>
+    </div>
+  )
+}
+
+export default Main;

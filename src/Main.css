@@ -1,0 +1,17 @@
+#heroSection {
+    height: 100vh;
+    background-image: url(./assets/images/desktop/image-header.jpg);
+    background-position: 50%;
+    background-size: contain;
+    color: white;
+    position: relative;
+    z-index: -1;
+}
+    #heroSection h1 {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%);
+        font-size: 4rem;
+        margin-block: 0;
+    }
