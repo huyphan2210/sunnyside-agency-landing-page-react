@@ -1,29 +1,36 @@
 import { useState } from 'react';
 
-import heroImg from './assets/images/desktop/image-header.jpg'
+import arrowDown from './assets/images/icon-arrow-down.svg'
+import transformDesktop from './assets/images/desktop/image-transform.jpg'
+import standOutDesktop from './assets/images/desktop/image-stand-out.jpg'
 
 import './Main.css';
 
 function Main() {
-
   return (
     <div id='content'>
       <section id='heroSection'>
         <h1>We are creatives</h1>
+        <img src={arrowDown} alt="Arrow Down"></img>
       </section>
-      <section>
-      Transform your brand
-
-      We are a full-service creative agency specializing in helping brands grow fast. 
-      Engage your clients through compelling visuals that do most of the marketing for you.
-
-      Learn more
-
-      Stand out to the right audience
-
-      Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places. 
-
-      Learn more
+      <section id='capabilities'>
+        <div className='capability'> 
+          <div className='text'>
+            <h2>Transform your brand</h2>
+            <p>We are a full-service creative agency specializing in helping brands grow fast. 
+            Engage your clients through compelling visuals that do most of the marketing for you.</p>
+            <button type='button'>Learn more</button>
+          </div>
+          <img src={transformDesktop} alt='Transform' loading='lazy'></img>
+        </div>
+        <div className='capability'>
+          <img src={standOutDesktop} alt='Stand out' loading='lazy'></img>
+          <div className='text'>
+            <h2>Stand out to the right audience</h2>
+            <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
+            <button type='button'>Learn more</button>
+          </div>
+        </div>
       </section>
       <section>
         Graphic design
