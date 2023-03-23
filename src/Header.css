@@ -1,29 +1,66 @@
 #header {
+    position: relative;
     width: 100%;
-    padding: 2rem 1.5rem;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
 }
+    #header img {
+        align-self: center;
+    }
+        #header img:nth-child(2) {
+            display: none;
+        }
+        
     #header nav {
-        width: 30%;
+        min-width: 30%;
         display: flex;
         justify-content: space-between;
     }
 
-        #header nav a {
+        #header nav div {
             font-family: Barlow, sans-serif;
-            display: block;
             color: white;
+            padding: 1rem;
         }
-            #header nav a:hover {
+            #header nav div:hover {
                 cursor: pointer;
             }
 
-        /* #header nav a:last-child {
-            font-family: Fraunces, sans-serif;
-            background-color: white;
-            color: black;
-            padding: 1rem;
-            border-radius: 2rem;
-            transform: translate(0, -50%);
-        } */
+            #header nav div:last-child {
+                font-family: Fraunces, sans-serif;
+                background-color: white;
+                color: black;
+                padding: 1rem;
+                border-radius: 2rem;
+            }
+
+            #header nav div:last-child:hover {
+                background-color: rgba(255, 255, 255, 0.5);
+                color: white;
+            }
+@media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
+    #header img:nth-child(2) {
+        display: block;
+    }
+
+    #header nav {
+        display: none;
+        padding: 1rem 1rem 2rem 1rem;
+        background-color: white;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        position: absolute;
+        top: 4rem;
+        left: 10vw;
+        width: calc(80vw - 2rem);
+    }
+
+        #header nav div {
+            color: hsl(210, 4%, 67%);
+        }
+        #header nav  div:last-child {
+            background-color: hsl(51, 100%, 49%);
+        }
+}
