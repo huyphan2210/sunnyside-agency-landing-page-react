@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap');
 
+:root {
+    --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --grayish-blue: hsl(210, 4%, 67%);
+}
+
 body {
     min-height: 100vh;
     margin: 0;
     background-color: white;
 }
     header {
-        width: 100%;
-        position: fixed;
+        width: 100vw;
+        position: absolute;
         display: flex;
         justify-content: space-between;
     }
@@ -16,3 +21,9 @@ body {
     main {
         font-family: Fraunces, sans-serif;
     }
+
+@media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
+    header {
+        position: fixed;
+    }
+}
