@@ -9,6 +9,7 @@
     z-index: -1;
     text-transform: uppercase;
     background-repeat: no-repeat;
+    background-position-y: 100%;
 }
     #heroSection h1 {
         position: absolute;
@@ -26,13 +27,16 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -25%);
-        transition: 1s;
+        animation: arrowMove 2s infinite alternate;
     }
 
     .capability {
         display: grid;
         grid-template-columns: 50% 50%;
     }
+        .capability:first-child img:first-child {
+            display: none;
+        }
         .text {
             align-self: center;
             padding: 20%;
@@ -43,8 +47,9 @@
                 color: var(--very-dark-desaturated-blue);
             }
             .text p {
-                font-family: Barlow, sans-serif;;
+                font-family: Barlow, sans-serif;
                 color: var(--grayish-blue);
+                line-height: 1.5rem;
             }
             .text button {
                 background-color: transparent;
@@ -57,6 +62,101 @@
             width: 100%;
         }
 
+#designs {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+    .design {
+        position: relative;
+        color: hsl(198, 62%, 26%);
+    }
+        .design:first-child {
+            color: hsl(167, 40%, 24%);
+        }
+        .design img {
+            width: 100%;
+        }
+            .design img:first-child {
+                display: none;
+            }
+        .design div {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+        }
+            .design div p {
+                font-family: Barlow, sans-serif;
+                line-height: 1.5rem;
+            }
+
+#clients {
+    min-height: 50vh;
+    text-align: center;
+    padding: 5% 10%;
+}
+    #clients h2 {
+        text-transform: uppercase;
+        color: var(--grayish-blue);
+        letter-spacing: 0.5rem;
+        margin-block-end: 10%;
+    }
+    .testimonials {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 1rem;
+    }
+        .testimonial {
+            position: relative;
+        }
+            .testimonial img {
+                max-width: 25%;
+                border-radius: 50%;
+                margin-block-end: 15%;
+            }
+            .testimonial p {
+                position: absolute;
+                font-family: Barlow, sans-serif;
+                color: var(--very-dark-grayish-blue);
+                top: 40%;
+                line-height: 1.5rem;
+            }
+                .detail {
+                    margin-block-start: 30%;
+                }
+                    .detail label {
+                        font-family: Barlow, sans-serif;
+                        color: var(--grayish-blue);
+                        display: block;
+                    }
+#creativeImgs {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+    #creativeImgs img{
+        width: 100%;
+    }
+
+@keyframes arrowMove {
+    from {
+        top: 50%
+    }
+    to {
+        top: 60%;
+    }
+}
+
+@media screen and (min-aspect-ratio: 1) and (max-width: 1024px) {
+    .testimonial p {
+        top: 30%;
+    }
+    .detail {
+        margin-block-start: 50%;
+    }
+        
+}
+
 @media screen and (max-aspect-ratio: 1) {
     #heroSection {
         height: 80vh;
@@ -64,9 +164,44 @@
         background-size: 100%;
         background-position: 0 100%;
     }
+
+        .capability {
+            grid-template-columns: auto;
+        }
+            .capability:first-child img:first-child {
+                display: block;
+            }
+            .capability:first-child img:last-child {
+                display: none;
+            }
+    #designs {
+        grid-template-columns: auto;
+    }
+        .design img {
+            display: none;
+        }
+            .design img:first-child {
+                display: block;
+            }
+            
+            .testimonials {
+                grid-template-columns: auto;
+            }  
+                .testimonial {
+                    margin-block-end: 2rem;
+                }
+                .testimonial p {
+                    position: static;
+                }  
+                    .detail {
+                        margin-block-start: 20%;
+                    }
         @media screen and (max-width: 767px) {
             #heroSection h1 {
                 font-size: 2rem;
+            }
+            .design div {
+                top: 60%;
             }
         }
         
