@@ -3,6 +3,8 @@
 
 :root {
     --very-dark-desaturated-blue: hsl(212, 27%, 19%);
+    --very-dark-grayish-blue: hsl(213, 9%, 39%);
+    --dark-grayish-blue: hsl(232, 10%, 55%);
     --grayish-blue: hsl(210, 4%, 67%);
 }
 
@@ -22,8 +24,13 @@ body {
         font-family: Fraunces, sans-serif;
     }
 
+    footer {
+        background-color: hsl(168, 34%, 41%);
+    }
+
 @media screen and (max-aspect-ratio: 1) and (max-width: 767px) {
     header {
         position: fixed;
+        z-index: 1;
     }
 }
