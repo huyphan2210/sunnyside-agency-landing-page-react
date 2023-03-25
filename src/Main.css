@@ -192,6 +192,7 @@
 
         .capability {
             grid-template-columns: auto;
+            text-align: center;
         }
             .capability:first-child img:first-child {
                 display: block;
