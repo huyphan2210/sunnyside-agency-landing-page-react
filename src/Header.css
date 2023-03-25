@@ -4,6 +4,7 @@
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
+    background-color: #3ebfff;
 }
     #header img {
         align-self: center;
@@ -56,11 +57,30 @@
         left: 10vw;
         width: calc(80vw - 2rem);
     }
+    #header nav::before {
+        background-clip: padding-box;
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 1rem 1rem 0 1rem;
+        background-color: white;
+        transform: translate(0, -100%);
+        top: 0;
+        right: 0;
+        border-style: solid;
+        border-color: transparent white transparent transparent;
+
+    }
 
         #header nav div {
             color: hsl(210, 4%, 67%);
         }
         #header nav  div:last-child {
             background-color: hsl(51, 100%, 49%);
+        }
+
+        #header nav div:last-child:hover {
+            background-color: hsla(51, 100%, 49%, 0.5);
         }
 }
