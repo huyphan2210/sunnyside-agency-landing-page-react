@@ -1,6 +1,6 @@
 # Frontend Mentor - Sunnyside agency landing page - Finished by Huy Phan
 
-![Design preview for the Sunnyside agency landing page coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Sunnyside agency landing page coding challenge](./public/desktop-preview.jpg)
 
 ## Welcome! 👋
 
