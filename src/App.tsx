@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import Header from './Header'
-import Main from './Main'
+import Main from './Content'
 import Footer from './Footer'
 import './index.css'
 
