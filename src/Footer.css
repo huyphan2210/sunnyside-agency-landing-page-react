@@ -1,0 +1,43 @@
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 20vh;
+    padding-block: 4rem;
+    text-align: center;
+    position: relative;
+    color: #478c7d;
+}
+    #contact svg {
+        transform: scale(1.2);
+    }
+        #contact img:first-child {
+            transform: scale(1.2);
+        }
+
+    .nav {
+        display: flex;
+        justify-content: center;
+    }
+        .nav div {
+            margin-right: clamp(1.5rem, 2vw, 2rem);
+            margin-left: clamp(1.5rem, 2vw, 2rem);
+        }
+        .nav div:hover {
+            color: white;
+            cursor: pointer;
+        }
+    .social img {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+        .social img:hover {
+            cursor: pointer;
+            filter: brightness(10);
+        }
+
+    #challenger {
+        position: absolute;
+        bottom: 1%;
+    }
