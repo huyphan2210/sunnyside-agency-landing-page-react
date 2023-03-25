@@ -1,5 +1,3 @@
-import { useState } from 'react';
-
 import arrowDown from './assets/images/icon-arrow-down.svg'
 import transformDesktop from './assets/images/desktop/image-transform.jpg'
 import standOutDesktop from './assets/images/desktop/image-stand-out.jpg'
@@ -34,7 +32,10 @@ function Main() {
             <h2>Transform your brand</h2>
             <p>We are a full-service creative agency specializing in helping brands grow fast. 
             Engage your clients through compelling visuals that do most of the marketing for you.</p>
-            <button type='button'>Learn more</button>
+            <button type='button'>
+              Learn more
+              <div></div>
+            </button>
           </div>
           <img src={transformDesktop} alt='Transform' loading='lazy'></img>
         </div>
@@ -43,7 +44,10 @@ function Main() {
           <div className='text'>
             <h2>Stand out to the right audience</h2>
             <p>Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we'll build and extend your brand in digital places.</p>
-            <button type='button'>Learn more</button>
+            <button type='button'>
+              Learn more
+              <div></div>
+            </button>
           </div>
         </div>
       </section>
